@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Cyber Space</h1>
+        <p>Passionate about cybersecurity | Constantly learning | Open to opportunities</p>
+    </header>
+
+    <div class="container">
+        <div class="box" id="about">
+            <h2>About Me</h2>
+            <p>Hi, I'm Tessa Anselm! I'm an aspiring cybersecurity professional with expertise in penetration testing, incident response, digital forensics, and cloud security. I love breaking into (and securing) systems while continuously improving my skills.</p>
+            
+            <h3>Education</h3>
+            <ul>
+                <li><strong>A.S. Computer Networking and Information Technology, Cybersecurity (In Progress)</strong> - City College of San Francisco (Aug 2020 - Present)</li>
+                <li>Dean’s Honor List (4.0 GPA)</li>
+                <li>President of WiCyS Student Chapter</li>
+                <li>CPTC and WRCCDC Co-Captain, ECTF Mitre Embedded System Participant</li>
+                <li>Top 300 Individual, Top 30 Team NCL Fall 2024</li>
+                <li>Top 2% TryHackMe</li>
+        <br>
+                <li><strong>B.S. Electrical Engineering</strong> - Trine University (2001)</li>
+                <li>National Dean's List, President of Society of Women Engineers (SWE)</li>
+                <li>Intern at Argonne National Laboratory, Dana Corporation & Maxim Integrated Products</li>
+                <li>Track Scholarship</li>
+            </ul>
+        </div>
+
+        <div class="box" id="skills">
+            <h2>My Skills & Certifications</h2>
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>🛡️ Cybersecurity Incident Response & SOC Operations</li>
+                <li>🔍 Cyber Threat Hunting & Digital Forensics</li>
+                <li>💻 Ethical Hacking & Penetration Testing</li>
+                <li>☁️ Cloud Security (AWS, Azure)</li>
+                <li>📜 Governance, Risk, & Compliance (GRC)</li>
+                <li>⚙️ Linux Scripting & Automation</li>
+                <li>🛠️ Programming: Python, Bash, Javascript, SQL and No SQL</li>
+            </ul>
+    <br>
+            <h3>Certifications</h3>
+            <ul>
+                <li>Security X (formerly CASP+), COMPTIA (2024)</li>
+                <li>Security+, COMPTIA (2024)</li>
+                <li>AWS Certified Cloud Practitioner, Amazon Web Services (2023)</li>
+                <li>Cybersecurity, ISC2 (2023)</li>
+                <li>GRC Analyst Master Class, Simply Cyber (2023)</li>
+                <li>AZ900, Microsoft (2022)</li>
+            </ul>
+        </div>
+
+        <div class="box" id="experience">
+            <h2>Experience</h2>
+
+            <h3>CyberCompetition Student Tech Mentor/ TA</h3>
+            <p><strong>Bay Area Cyber | May 2024 - Dec 2024</strong></p>
+            <ul>
+                <li>Mentored and trained students for the National Cyber League (NCL).</li>
+                <li>Encouraged engagement with cybersecurity tools and concepts.</li>
+                <li>Assisted in delivering lectures, labs, and workshops on cybersecurity topics.</li>
+                <li>Guided students in using tools like Kali Linux, Nmap, and Wireshark.</li>
+                <li>Managed classroom tech and ensured smooth execution of hands-on labs.</li>
+            </ul>
+        <br>
+            <h3>President, Women in Cybersecurity (WiCyS) CCSF Student Chapter</h3>
+            <p><strong>CCSF | Aug 2024 - Present</strong></p>
+            <ul>
+                <li>Managed club resources, leadership committee, and members.</li>
+                <li>Coordinated speaker engagements, secured funding, and administrative paperwork.</li>
+            </ul>
+            <ul>
+                
+            </ul>
+        <br>
+            <h3>Self-Employed Childcare Provider & Birth Worker</h3>
+            <p><strong>Independent | 2005 - 2020</strong></p>
+            <ul>
+                <li>Provided compassionate and professional childcare services to families, ensuring a safe and nurturing environment.</li>
+                <li>Assisted parents with newborn care, postpartum support, and holistic birth work services.</li>
+                <li>Developed and maintained strong client relationships, demonstrating excellent communication and interpersonal skills.</li>
+                <li>Managed business operations, including scheduling, financial planning, and client consultations.</li>
+                <li>Applied problem-solving, crisis management, and adaptability skills in high-pressure situations.</li>
+            </ul>
+        </div>
+
+        <div class="box" id="projects">
+            <h2>My Projects</h2>
+            <p>
+                I actively document and share my hands-on cybersecurity and development projects on GitHub, covering a range of topics 
+                from penetration testing to web security automation. Here’s a glimpse of my work:
+            </p>
+        
+            <h3>📌 Daily Cyber Repository</h3>
+            <p><strong>What’s Inside?</strong></p>
+            <ul>
+                <li>🔍 <strong>Threat Hunting & Digital Forensics</strong> – Analyzing logs, malware analysis, and memory forensics.</li>
+                <li>💻 <strong>Penetration Testing</strong> – Web app security, network scanning, and privilege escalation.</li>
+                <li>🛡️ <strong>Defensive Security</strong> – SIEM setup, log analysis, and incident response exercises.</li>
+                <li>☁️ <strong>Cloud Security</strong> – Hands-on practice with AWS security, IAM policies, and attack simulations.</li>
+                <li>📜 <strong>Governance, Risk & Compliance (GRC)</strong> – Learning regulatory frameworks and compliance auditing.</li>
+                <li>⚙️ <strong>Automation & Scripting</strong> – Python and Bash scripts for cybersecurity tasks.</li>
+            </ul>
+            <p>🔗 <a href="https://github.com/TessaAnselm/DailyCyber" target="_blank">Daily Cyber Repository</a></p>
+        <br>
+            <h3>📌 Collegiate Cybersecurity Competitions</h3>
+            <p>
+                As part of my cybersecurity training, I have participated in 
+                <strong>CCDC (Collegiate Cyber Defense Competition)</strong> and 
+                <strong>CPTC (Collegiate Penetration Testing Competition)</strong>. 
+                I am actively working on documenting my experiences, strategies, and key takeaways in my repositories.
+            </p>
+            <p>🚧 <strong>Note:</strong> These repositories are a <strong>work in progress</strong> as I continue to add insights, analysis, and learning materials.</p>
+        
+            <h4>🔹 CCDC (Collegiate Cyber Defense Competition)</h4>
+            <ul>
+                <li>🚀 <strong>Blue Team Focus</strong> – Defensive strategies, incident response, and system hardening.</li>
+                <li>📊 <strong>SIEM Implementation & Monitoring</strong> – Analyzing security logs and mitigating real-time attacks.</li>
+                <li>🔐 <strong>Firewall & IDS Configuration</strong> – Setting up intrusion detection and traffic filtering.</li>
+                <li>📝 <strong>Documentation & Lessons Learned</strong> – Recap of scenarios, attack vectors, and defensive measures.</li>
+            </ul>
+            <p>🔗 <a href="https://github.com/TessaAnselm/CCDC" target="_blank">CCDC Documentation Repository (Work in Progress)</a></p>
+        
+            <h4>🔹 CPTC (Collegiate Penetration Testing Competition)</h4>
+            <ul>
+                <li>🕵️ <strong>Red Team Tactics</strong> – Simulating real-world attacks on enterprise environments.</li>
+                <li>💻 <strong>Vulnerability Assessment</strong> – Identifying and exploiting misconfigurations and security flaws.</li>
+                <li>📂 <strong>Exploit Development & Reporting</strong> – Writing professional penetration testing reports.</li>
+                <li>📜 <strong>Ethical Hacking & Compliance</strong> – Following responsible disclosure policies.</li>
+            </ul>
+            <p>🔗 <a href="https://github.com/TessaAnselm/CPTC" target="_blank">CPTC Documentation Repository (Work in Progress)</a></p>
+        <br>
+            <h3>📌 JavaScript School Projects</h3>
+            <p>Beyond cybersecurity, I have worked on several programming and web development projects, including JavaScript applications. </p>
+           <p>🔗 <a href="https://raw.githack.com/TessaAnselm/cnit133-assignment/main/index.html" target="_blank">JavaScript Projects</a></p>
+        
+            <h4>📌 Serving JavaScript Files via Raw.GitHack</h4>
+            <p>
+                <a href="https://raw.githack.com/" target="_blank">Raw.GitHack</a> is a useful tool for serving JavaScript, HTML, and CSS files 
+                directly from GitHub repositories with the correct <strong>Content-Type headers</strong>. 
+                It’s great for quick testing and demos without needing a separate web server.
+            </p>
+            <h4>⚠️ Security Disclaimer</h4>
+            <p>
+            This JavaScript project was developed for **learning and demonstration purposes** and **does not follow security best practices**.  
+            It contains **authentication details in the source code and runs entirely in the browser**, which means:
+            </p>
+<ul>
+    <li>❌ **Sensitive credentials are exposed** in the client-side code.</li>
+    <li>❌ **No proper authentication handling** (e.g., no secure token storage or server-side validation).</li>
+    <li>⚠️ **Vulnerable to attacks like token theft and API misuse**.</li>
+</ul>
+        
+            <h4>⚠️ Security Note</h4>
+            <p>
+                Raw.GitHack is best for <strong>development and testing</strong> but <strong>shouldn’t be used for production scripts</strong>, 
+                as it lacks security controls like <strong>Content Security Policy (CSP)</strong> and <strong>Subresource Integrity (SRI)</strong>.
+            </p>
+        
+            <p>🔗 <a href="https://raw.githack.com/" target="_blank">Visit Raw.GitHack</a> to learn more.</p>
+        </div>
+            
+        </div>
+
+        <div class="box" id="resources">
+            <h2>Cybersecurity Resources</h2>
+            <p>Some of my favorite learning resources:</p>
+            <ul>
+                <li><a href="https://www.blackhillsinfosec.com/tag/training/" target="_blank">Black Hills Infosec</a></li>
+                <li><a href="https://cyberdefenders.org/" target="_blank">Cyber Defenders</a></li>
+                <li><a href="https://www.hackthebox.com/" target="_blank">Hack The Box</a></li>
+                <li><a href="https://owasp.org/" target="_blank">OWASP</a></li>
+                <li><a href="https://portswigger.net/web-security" target="_blank">PortSwigger</a></li>
+                <li><a href="https://samsclass.info/" target="_blank">Sam Bowne</a></li>
+                <li><a href="https://tryhackme.com/" target="_blank">TryHackMe</a></li>
+                
+                
+               
+            </ul>
+        </div>
+
+        <div class="box" id="contact">
+            <h2>Get in Touch</h2>
+            <p>Let's connect! Reach me on:</p>
+            <ul>
+                <li>💼 <a href="https://www.linkedin.com/in/tessa-anselm" target="_blank">LinkedIn</a></li>
+                <li>🐙 <a href="https://github.com/TessaAnselm" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
