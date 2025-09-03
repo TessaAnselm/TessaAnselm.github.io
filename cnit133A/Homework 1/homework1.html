@@ -1,0 +1,157 @@
+<!-- 
+  CNIT 133A - JavaScript Libraries/Frameworks - 831
+  Homework Assignment 1
+  Student: Tessa Anselm
+  Date: Posted by 9/14/2025
+
+  Description:
+  - Theme toggle using jQuery (Light/Dark with sun & moon images)
+  - Visual effects: sun rays in light mode, shooting stars in dark mode (added for fun)
+  - HTMX Q&A with code example and live city demo (emoji-based mock added for fun)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Theme Toggle with jQuery + HTMX Triggers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <!-- HTMX (for the Q&A example text; live demo below uses jQuery only) -->
+  <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+</head>
+<body class="light">
+  <main class="container">
+    <h1>Theme Toggle using jQuery + HTMX Triggers</h1>
+
+    <!-- Theme toggle + image card -->
+    <section class="card">
+      <div class="buttons" role="group" aria-label="Theme toggle">
+        <button id="lightBtn" type="button" aria-pressed="true">Light Theme</button>
+        <button id="darkBtn"  type="button" aria-pressed="false">Dark Theme</button>
+      </div>
+
+      <figure class="theme-box">
+        <div class="sky-box">
+          <!-- Sun / Moon image -->
+          <img id="themeImage" src="sun.jpeg" alt="Cartoon sun">
+
+          <!-- Shooting stars (DARK only) -->
+          <span class="shooting-star"></span>
+          <span class="shooting-star"></span>
+          <span class="shooting-star"></span>
+
+          <!-- Sun rays (LIGHT only) — angles & delays via CSS vars -->
+          <span class="sun-ray" style="--angle: 0deg;   --delay: 0s;"></span>
+          <span class="sun-ray" style="--angle: 45deg;  --delay: .2s;"></span>
+          <span class="sun-ray" style="--angle: 90deg;  --delay: .4s;"></span>
+          <span class="sun-ray" style="--angle: 135deg; --delay: .6s;"></span>
+          <span class="sun-ray" style="--angle: 180deg; --delay: .8s;"></span>
+          <span class="sun-ray" style="--angle: 225deg; --delay: 1.0s;"></span>
+          <span class="sun-ray" style="--angle: 270deg; --delay: 1.2s;"></span>
+          <span class="sun-ray" style="--angle: 315deg; --delay: 1.4s;"></span>
+        </div>
+        <figcaption>Current theme image</figcaption>
+      </figure>
+    </section>
+
+    <!-- HTMX Q&A + Live Example card -->
+    <section class="card" id="htmx-answer">
+      <h2>HTMX Question</h2>
+
+      <p><strong>Is it possible to have multiple trigger types in HTMX?</strong></p>
+      <p>
+        Yes, you can specify multiple triggers by separating them with commas in 
+        the <code>hx-trigger</code> attribute. For example, to send a request both 
+        when the page first <em>loads</em> and whenever the select value 
+        <em>changes</em>, you could write:
+      </p>
+
+      <!-- Code example block (for the written answer) -->
+      <pre><code>&lt;select name="city" id="city"
+        hx-post="/api/search"
+        hx-trigger="load, change"
+        hx-target="#result"&gt;
+  &lt;option&gt;San Francisco&lt;/option&gt;
+  &lt;option&gt;New York&lt;/option&gt;
+  &lt;option&gt;Las Vegas&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;div id="result" aria-live="polite"&gt;&lt;/div&gt;</code></pre>
+
+      <p>In this code:</p>
+      <ul>
+        <li><code>hx-post="/api/search"</code> → sends a POST to the server endpoint <code>/api/search</code>.</li>
+        <li><code>hx-trigger="load, change"</code> → fires once on load and again on value changes.</li>
+        <li><code>hx-target="#result"</code> → injects the server’s HTML into the element with id <code>result</code>.</li>
+      </ul>
+
+      <p>
+        The value <code>/api/search</code> represents the <strong>server route (URL)</strong> that receives 
+        the POST request. The server should read the <code>city</code> value and return an HTML snippet, 
+        which HTMX swaps into the <code>#result</code> div.
+      </p>
+
+      <!-- Live demo element (frontend mock with emojis; no backend needed) -->
+      <h3>Live Example</h3>
+      <label for="cityDemo">Choose a city:</label>
+      <select id="cityDemo">
+        <option value="">-- Please select a city --</option>
+        <option>San Francisco</option>
+        <option>New York</option>
+        <option>Las Vegas</option>
+      </select>
+
+      <div id="resultDemo" aria-live="polite"
+           style="min-height:2rem; margin-top:0.5rem; border:1px dashed currentColor; padding:0.5rem;">
+        <p>
+          Pick a city and watch the magic! 
+          <img src="https://cdn.discordapp.com/emojis/716236235735171073.png"
+               alt="Unicorn dab" style="max-width:60px; vertical-align:middle;">
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    $(function () {
+      // Theme toggle
+      function applyTheme(theme) {
+        $("body").removeClass("light dark").addClass(theme);
+
+        if (theme === "dark") {
+          $("#themeImage").attr({ src: "moon.jpeg", alt: "Cartoon moon" });
+          $("#darkBtn").attr("aria-pressed", "true");
+          $("#lightBtn").attr("aria-pressed", "false");
+        } else {
+          $("#themeImage").attr({ src: "sun.jpeg", alt: "Cartoon sun" });
+          $("#lightBtn").attr("aria-pressed", "true");
+          $("#darkBtn").attr("aria-pressed", "false");
+        }
+      }
+      applyTheme("light");
+      $("#lightBtn").on("click", () => applyTheme("light"));
+      $("#darkBtn").on("click",  () => applyTheme("dark"));
+
+      // Live Example (emoji mock)
+      $("#cityDemo").on("change", function () {
+        const city = $(this).val();
+        let content = '<p>Pick a city and watch the magic! <img src="https://cdn.discordapp.com/emojis/716236235735171073.png" alt="Unicorn dab" style="max-width:60px; vertical-align:middle;"></p>';
+
+        if (city === "San Francisco") {
+          content = "<p>San Francisco 🌉 🏳️‍🌈 🌁 🥖 </p>";
+        } else if (city === "New York") {
+          content = "<p>New York 🗽 🍎 🎭 🏙️</p>";
+        } else if (city === "Las Vegas") {
+          content = "<p>Las Vegas ♦️ ♣️ ♥️ ♠️</p>";
+        }
+        $("#resultDemo").html(content);
+      });
+    });
+  </script>
+</body>
+</html>

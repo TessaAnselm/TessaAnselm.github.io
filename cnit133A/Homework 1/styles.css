@@ -1,0 +1,160 @@
+/* 
+  CNIT 133A - JavaScript Libraries/Frameworks - 831
+  Homework Assignment 1
+  Student: Tessa Anselm
+  Date: Posted by 9/14/2025
+
+  Stylesheet for theme toggle:
+  - Base layout, buttons, image figure
+  - Code block formatting
+  - Sun rays (light mode) & shooting stars (dark mode)
+*/
+
+/* ===== Root variables ===== */
+:root {
+  --sun-radius: 60px; /* half the width of your sun image (220px wide image → ~110px) */
+}
+
+/* ===== Base layout ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1.5rem;
+  transition: background-color .25s ease, color .25s ease;
+}
+.container { max-width: 760px; margin: 0 auto; }
+.card { border: 1px solid currentColor; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+
+/* ===== Themes (match JS: .light / .dark) ===== */
+body.light { background: #ffffff; color: #111111; }
+body.dark  { background: #000000; color: #f5f5f5; }
+
+/* ===== Buttons ===== */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-bottom: .75rem;
+}
+button {
+  padding: .55rem 1rem;
+  border-radius: 6px;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+button:focus-visible { outline: 2px dashed currentColor; outline-offset: 2px; }
+body.dark .buttons button { background: #222; color: #ffffff; border-color: #ffffff; }
+
+/* ===== Figure / image ===== */
+figure { margin: 1rem 0 0; text-align: center; }
+#themeImage {
+  display: block;
+  max-width: 220px;
+  height: auto;
+  margin: 0.5rem auto;
+}
+figcaption { opacity: .8; font-size: .9rem; margin-top: .25rem; }
+
+/* ===== Code block ===== */
+#htmx-answer { text-align: left; } /* center inline-block <pre> */
+
+pre {
+  background: #f4f4f4;
+  color: #222;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  display: inline-block;      /* shrink to content width */
+  white-space: pre;           /* preserve spacing */
+  max-width: 100%;
+  margin: 1rem auto;
+  text-align: left;
+}
+pre code { display: block; white-space: inherit; }
+body.dark pre { background: #1e1e1e; color: #f5f5f5; border-color: #555; }
+
+/* ===== Sky effects ===== */
+.sky-box {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* keep streaks inside */
+}
+
+/* --- Shooting stars (DARK) --- */
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(-45deg, #fff, transparent);
+  opacity: 0;
+  transform: rotate(45deg);
+  animation: starShoot 4s linear infinite;
+}
+/* start positions & delays */
+.shooting-star:nth-of-type(1) { top: -20px; left: 70%; animation-delay: .4s; }
+.shooting-star:nth-of-type(2) { top:  20px; left: 50%; animation-delay: 2s;  }
+.shooting-star:nth-of-type(3) { top:  60px; left: 30%; animation-delay: 4s;  }
+
+@keyframes starShoot {
+  0%   { transform: translate(0, 0) rotate(45deg); opacity: 0; }
+  10%  { opacity: 1; }
+  100% { transform: translate(-300px, 300px) rotate(45deg); opacity: 0; }
+}
+
+/* --- Sun rays as bursts (LIGHT) --- */
+.sun-ray {
+  --angle: 0deg;
+  --delay: 0s;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 200px;
+  transform-origin: center center;
+  transform: translate(-50%, -50%) rotate(var(--angle)) scale(.5);
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255,205,0,0) 0%,
+    rgba(255,205,0,.85) 40%,
+    rgba(255,205,0,.25) 100%
+  );
+  filter: blur(.8px);
+  opacity: 0;
+
+  animation: rayBurst 3s linear infinite;
+  animation-delay: var(--delay);
+
+  pointer-events: none;
+  z-index: 1;
+
+  /* mask inside the sun circle, radius pulled from :root */
+  -webkit-mask: radial-gradient(circle var(--sun-radius) at center,
+                                transparent calc(var(--sun-radius) - 1px),
+                                black var(--sun-radius));
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 200%;
+          mask: radial-gradient(circle var(--sun-radius) at center,
+                                transparent calc(var(--sun-radius) - 1px),
+                                black var(--sun-radius));
+}
+
+@keyframes rayBurst {
+  0%   { transform: translate(-50%, -50%) rotate(var(--angle)) scale(.5); opacity: 0; }
+  18%  { opacity: 1; }
+  100% { transform: translate(-50%, -50%) rotate(var(--angle)) scale(1.8); opacity: 0; }
+}
+
+/* theme toggles */
+body.light .sun-ray { display: block; }
+body.light .shooting-star { display: none; }
+body.dark  .sun-ray { display: none; }
+body.dark  .shooting-star { display: block; }
