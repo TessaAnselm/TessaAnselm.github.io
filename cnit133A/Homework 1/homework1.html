@@ -21,8 +21,13 @@
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
-  <!-- HTMX (for the Q&A example text; live demo below uses jQuery only) -->
-  <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+  
+  <!-- HTMX placeholder:
+     Normally you would include HTMX like this if using hx-* attributes:
+     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+     In this assignment, HTMX is only shown in the Q&A example text.
+     The live demo below is implemented with jQuery only. -->
+     
 </head>
 <body class="light">
   <main class="container">
@@ -95,9 +100,13 @@
         the POST request. The server should read the <code>city</code> value and return an HTML snippet, 
         which HTMX swaps into the <code>#result</code> div.
       </p>
-
+      <!-- HTMX example code below is for illustration only. Live demo is implemented with jQuery (no backend). -->
       <!-- Live demo element (frontend mock with emojis; no backend needed) -->
+       
       <h3>Live Example</h3>
+      <p><em>Note:</em> The HTMX code example above is for illustration only (it requires a backend).
+      For user viewing, the <strong>Live Example below is implemented with jQuery</strong> as a mock demo,
+      so you can see something happen without a server.</p>
       <label for="cityDemo">Choose a city:</label>
       <select id="cityDemo">
         <option value="">-- Please select a city --</option>
