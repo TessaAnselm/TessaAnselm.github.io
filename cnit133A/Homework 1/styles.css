@@ -158,3 +158,16 @@ body.light .sun-ray { display: block; }
 body.light .shooting-star { display: none; }
 body.dark  .sun-ray { display: none; }
 body.dark  .shooting-star { display: block; }
+
+/* Assignment prompt box */
+blockquote.prompt {
+  border-left: 4px solid currentColor;
+  padding: .5rem 1rem;
+  margin: .75rem 0;
+  background: rgba(0,0,0,.04);
+  border-radius: 4px;
+}
+
+body.dark blockquote.prompt {
+  background: rgba(255,255,255,.06);
+}

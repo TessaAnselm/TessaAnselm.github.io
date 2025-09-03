@@ -69,8 +69,15 @@
     <!-- HTMX Q&A + Live Example card -->
     <section class="card" id="htmx-answer">
       <h2>HTMX Question</h2>
-
-      <p><strong>Is it possible to have multiple trigger types in HTMX?</strong></p>
+    <!-- Assignment prompt (verbatim) -->
+      <blockquote class="prompt">
+        <strong>Prompt:</strong> Is it possible to have multiple trigger types in HTMX? 
+        For example, suppose that I want to trigger the request when a select element 
+        (see the element below) changes or load and then display the response in an area 
+        of my page with <code>id="result"</code>. So, if I have the following select element, 
+        how would I use/code the htmx attributes for this scenario? Notice that the POST 
+        request is already coded.
+      </blockquote>
       <p>
         Yes, you can specify multiple triggers by separating them with commas in 
         the <code>hx-trigger</code> attribute. For example, to send a request both 
