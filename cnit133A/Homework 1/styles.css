@@ -12,7 +12,7 @@
 
 /* ===== Root variables ===== */
 :root {
-  --sun-radius: 60px; /* half the width of your sun image (220px wide image → ~110px) */
+  --sun-radius: 60px; 
 }
 
 /* ===== Base layout ===== */
@@ -59,7 +59,7 @@ figure { margin: 1rem 0 0; text-align: center; }
 figcaption { opacity: .8; font-size: .9rem; margin-top: .25rem; }
 
 /* ===== Code block ===== */
-#htmx-answer { text-align: left; } /* center inline-block <pre> */
+#htmx-answer { text-align: left; } 
 
 pre {
   background: #f4f4f4;
