@@ -22,7 +22,19 @@
 <body>
 <h2>Number of Students per Term</h2>
 <div id="chart"></div>
-
+<div id="explanation" class="below-text">
+    <h3>Homework Explanation</h3>
+    <p>
+      This bar chart was created using D3.js to visualize the number of students 
+      in the CNIT department from Spring 2016 through Fall 2018. Each bar represents 
+      one term, and the height of the bar corresponds to the enrollment count. 
+    </p>
+    <p>
+      For the extra credit, I added interactive tooltips: when you hover over a bar, 
+      the tooltip displays the exact term and number of students. The chart uses a 
+      dark theme with light text and blue bars that change to orange on hover.
+    </p>
+  </div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 
 <script>
@@ -103,18 +115,5 @@ d3.json("hw3data.json", function(error, data) {
 });
 </script>
 
-<div id="explanation" class="below-text">
-  <h3>Homework Explanation</h3>
-  <p>
-    This bar chart was created using D3.js to visualize the number of students 
-    in the CNIT department from Spring 2016 through Fall 2018. Each bar represents 
-    one term, and the height of the bar corresponds to the enrollment count. 
-  </p>
-  <p>
-    For the extra credit, I added interactive tooltips: when you hover over a bar, 
-    the tooltip displays the exact term and number of students. The chart uses a 
-    dark theme with light text and blue bars that change to orange on hover.
-  </p>
-</div>
 </body>
 </html>

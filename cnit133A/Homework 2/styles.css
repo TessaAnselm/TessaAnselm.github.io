@@ -46,6 +46,16 @@ body {
 /* Modification made from the original provided tooltip style for 
 more visibility  by adding black color */
 
+/* ===== Style added to git explain graph ===== */
+#chart-container {
+  width: 700px;       
+  margin: 0 auto;     /* center container */
+}
+
+#chart, #explanation {
+  box-sizing: border-box;  /* ensures padding doesn't overflow */
+  width: 50%; /* constrains text inside chart */
+}
 #explanation {
   margin-top: 20px;
   color: #eaeaea;
