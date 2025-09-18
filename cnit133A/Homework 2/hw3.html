@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<!-- 
+  CNIT 133A - JavaScript Libraries/Frameworks - 831
+  Homework Assignment 2
+  Student: Tessa Anselm
+  Date: Posted by 9/21/2025
+
+  Description:
+  - D3.js bar chart showing the number of students per term (Spring 2016 – Fall 2018)
+  - Bars represent enrollment, with blue color theme
+  - Extra credit: interactive tooltips on hover displaying term and student count
+-->
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Interactive D3.js bar chart visualizing student enrollment per term from Spring 2016 through Fall 2018.">
+<title>D3 Homework</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h2>Number of Students per Term</h2>
+<div id="chart"></div>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script>
+// Moved script to run inside body to ensure DOM elements are loaded before the scripts run
+// SVG dimensions and margins
+var margin = {top: 20, right: 20, bottom: 70, left: 50},
+    width = 700 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+// Create SVG inside #chart
+var svg = d3.select("#chart")
+    .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// Tooltip div
+var tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip");
+
+// Load JSON data and create chart
+d3.json("hw3data.json", function(error, data) {
+    if (error) {
+        console.warn("Could not load hw3data.json:", error);
+        // handle error or use fallback data
+    } else {
+    // X scale
+    var x = d3.scaleBand()
+        .range([0, width])
+        .padding(0.2)
+        .domain(data.map(function(d) { return d.term; }));
+
+    // Y scale
+    var y = d3.scaleLinear()
+        .range([height, 0])
+        .domain([0, d3.max(data, function(d) { return d.students; })]);
+
+    // Add X axis
+    svg.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+        .attr("transform", "rotate(-45)")
+        .style("text-anchor", "end");
+
+    // Add Y axis
+    svg.append("g")
+        .attr("class", "axis")
+        .call(d3.axisLeft(y));
+
+    // Draw bars
+    svg.selectAll(".bar")
+        .data(data)
+        .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", function(d) { return x(d.term); })
+        .attr("width", x.bandwidth())
+        .attr("y", function(d) { return y(d.students); })
+        .attr("height", function(d) { return height - y(d.students); })
+        .on("mouseover", function(d) {
+            tooltip.transition().duration(200).style("opacity", 1);
+            tooltip.html("<strong>" + d.term + "</strong><br/>Students: " + d.students)
+                   .style("left", (d3.event.pageX + 10) + "px")
+                   .style("top", (d3.event.pageY - 28) + "px");
+            d3.select(this).attr("fill", "orange");
+        })
+        .on("mousemove", function() {
+            tooltip.style("left", (d3.event.pageX + 10) + "px")
+                   .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on("mouseout", function() {
+            tooltip.transition().duration(200).style("opacity", 0);
+            d3.select(this).attr("fill", "#4aaeea");
+        });
+    }
+});
+</script>
+
+<div id="explanation" class="below-text">
+  <h3>Homework Explanation</h3>
+  <p>
+    This bar chart was created using D3.js to visualize the number of students 
+    in the CNIT department from Spring 2016 through Fall 2018. Each bar represents 
+    one term, and the height of the bar corresponds to the enrollment count. 
+  </p>
+  <p>
+    For the extra credit, I added interactive tooltips: when you hover over a bar, 
+    the tooltip displays the exact term and number of students. The chart uses a 
+    dark theme with light text and blue bars that change to orange on hover.
+  </p>
+</div>
+</body>
+</html>

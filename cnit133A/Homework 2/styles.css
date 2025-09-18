@@ -1,0 +1,58 @@
+/* 
+  CNIT 133A - JavaScript Libraries/Frameworks - 831
+  Homework Assignment 1
+  Student: Tessa Anselm
+  Date: Posted by 9/21/2025
+*/
+
+/* ===== Style provided by instructor ===== */
+body {
+    background: #1a1a1a;
+    color: #eaeaea;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+#chart rect {
+    fill: #4aaeea;
+}
+
+#chart rect:hover {
+    fill: orange;
+}
+
+.axis text {
+    font: 10px sans-serif;
+    fill: #eaeaea;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+}
+
+.tooltip {
+    position: absolute;
+    background: #f4f4f4;
+    color: black;  
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0;
+}
+/* Modification made from the original provided tooltip style for 
+more visibility  by adding black color */
+
+#explanation {
+  margin-top: 20px;
+  color: #eaeaea;
+  font-size: 14px;
+  line-height: 1.5;
+}
+#explanation h3 {
+  margin-bottom: 8px;
+  color: #4aaeea;
+}
