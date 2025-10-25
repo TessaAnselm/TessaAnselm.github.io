@@ -6,7 +6,7 @@ import { NavbarComponent } from './components/navbar/navbar';
   selector: 'app-root',
   imports: [RouterOutlet, NavbarComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css'] // Recommended to make this plural, works regardless locally
 })
 export class AppComponent {
   title = 'nut-products-app';
