@@ -1,0 +1,60 @@
+.home-container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #FFF8DC;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/nuttyphoto.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+h1 {
+  color: #8B4513;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+p {
+  color: #5D4037;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.link {
+  color: #D2691E;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #8B4513;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}

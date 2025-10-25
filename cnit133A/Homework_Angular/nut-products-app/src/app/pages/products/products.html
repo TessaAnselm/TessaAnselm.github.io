@@ -1,0 +1,21 @@
+<div class="products-container">
+  <h1>Our Products</h1>
+  
+  <div *ngIf="loading" class="loading">Loading products...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+  
+  <div class="products-grid" *ngIf="!loading && !error && products.length > 0">
+    <article class="product-card" *ngFor="let product of products">
+      <h2>{{ product.shortdesc }}</h2>
+      <p class="description">{{ product.longdesc }}</p>
+      <p class="details">
+        <span class="unit-size">{{ product.unitsize }}</span> - 
+        <span class="price">{{ product.unitprice }}</span>
+      </p>
+    </article>
+  </div>
+  
+  <div *ngIf="!loading && !error && products.length === 0" class="no-products">
+    No products available at the moment.
+  </div>
+</div>

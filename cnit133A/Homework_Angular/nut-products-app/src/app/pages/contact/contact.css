@@ -1,0 +1,125 @@
+.contact-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  position: relative;
+}
+
+.contact-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/nuttyphoto.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.08;
+  z-index: -1;
+  pointer-events: none;
+}
+
+h1 {
+  color: #8B4513;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-form {
+  background-color: rgba(255, 248, 220, 0.95);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  color: #8B4513;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #D2691E;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #8B4513;
+  background-color: #fff;
+}
+
+input.error,
+textarea.error {
+  border-color: #dc3545;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.submit-btn {
+  background-color: #8B4513;
+  color: #FFF8DC;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #A0522D;
+}
+
+.submission-confirmation {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: rgba(232, 245, 233, 0.95);
+  border: 1px solid #4CAF50;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+
+.submission-confirmation h3 {
+  color: #2E7D32;
+  margin-bottom: 1rem;
+}
+
+.submission-confirmation p {
+  color: #1B5E20;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
