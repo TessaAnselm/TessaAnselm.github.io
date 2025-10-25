@@ -7,7 +7,7 @@ import { Product } from '../../../models/product.interface';
   selector: 'app-products',
   imports: [CommonModule],
   templateUrl: './products.html',
-  styleUrl: './products.css'
+  styleUrls: ['./products.css']  // fixed typo
 })
 export class ProductsComponent implements OnInit {
   products: Product[] = [];
@@ -17,7 +17,7 @@ export class ProductsComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<Product[]>('products.json')  // Changed from 'assets/products.json'
+    this.http.get<Product[]>('assets/products.json')  // correct path
       .subscribe({
         next: (data) => {
           console.log('Products loaded:', data);
