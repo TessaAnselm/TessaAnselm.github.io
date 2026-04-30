@@ -1,200 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cybersecurity Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tessa Anselm — Cybersecurity Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to My Cyber Space</h1>
-        <p>Passionate about cybersecurity | Constantly learning | Open to opportunities</p>
-    </header>
+<nav>
+  <span class="nav-logo">tessa@anselm:~$</span>
+  <ul class="nav-links">
+    <li><a href="#about">about</a></li>
+    <li><a href="#projects">projects</a></li>
+    <li><a href="#experience">experience</a></li>
+    <li><a href="#skills">skills</a></li>
+    <li><a href="#contact">contact</a></li>
+  </ul>
+</nav>
 
-    <div class="container">
-        <div class="box" id="about">
-            <h2>About Me</h2>
-            <p>Hi, I'm Tessa Anselm! I'm an aspiring cybersecurity professional with expertise in penetration testing, incident response, digital forensics, and cloud security. I love breaking into (and securing) systems while continuously improving my skills.</p>
-            
-            <h3>Education</h3>
-            <ul>
-                <li><strong>A.S. Computer Networking and Information Technology, Cybersecurity </strong> - City College of San Francisco (Spring 2021 - Fall 2025 )</li>
-                <li>Dean’s Honor List (4.0 GPA)</li>
-                <li>President of WiCyS Student Chapter</li>
-                <li>CPTC and WRCCDC Co-Captain, ECTF Mitre Embedded System Participant</li>
-                <li>Top 2% Individual NCL Spring 2025</li>
-                <li>Top % TryHackMe</li>
-        <br>
-                <li><strong>B.S. Electrical Engineering</strong> - Trine University </li>
-                <li>National Dean's List, President of Society of Women Engineers (SWE)</li>
-                <li>Intern at Argonne National Laboratory, Dana Corporation & Maxim Integrated Products</li>
-                <li>Track Scholarship</li>
-            </ul>
-        </div>
+<main>
 
-        <div class="box" id="skills">
-            <h2>My Skills & Certifications</h2>
-            <h3>Technical Skills</h3>
-            <ul>
-                <li>🛡️ Cybersecurity Incident Response & SOC Operations</li>
-                <li>🔍 Cyber Threat Hunting & Digital Forensics</li>
-                <li>💻 Ethical Hacking & Penetration Testing</li>
-                <li>☁️ Cloud Security (AWS, Azure)</li>
-                <li>📜 Governance, Risk, & Compliance (GRC)</li>
-                <li>⚙️ Linux Scripting & Automation</li>
-                <li>🛠️ Programming: Python, Bash, Javascript, SQL and No SQL</li>
-            </ul>
-    <br>
-            <h3>Certifications</h3>
-            <ul>
-                <li>A+, COMPTIA (2025)</li>
-                <li>Security X (formerly CASP+), COMPTIA (2024)</li>
-                <li>Security+, COMPTIA (2024)</li>
-                <li>AWS Certified Cloud Practitioner, Amazon Web Services (2023)</li>
-                <li>Cybersecurity, ISC2 (2023)</li>
-                <li>GRC Analyst Master Class, Simply Cyber (2023)</li>
-                <li>AZ900, Microsoft (2022)</li>
-            </ul>
-    <br>
-             <h3>Lighting Talk</h3>
-            <ul>
-  <li><a href="https://drive.google.com/file/d/1KXVNMRyGGXHVs_ht5GHZxnpdxBTt2H-Y/view?usp=drive_link" target="_blank">Importance of Change Management Protocol</a></li>
-  <li><a href="https://drive.google.com/file/d/1gi5M0reSFrqIbKhU5aG2h0gD8OjTwAD9/view?usp=drive_link" target="_blank">Pig Butchering Scam Awareness</a></li>
-            </ul>
-        </div>
+  <!-- HERO -->
+  <section class="hero" id="about">
+    <div>
+      <p class="hero-tag">Cloud Security &amp; Cybersecurity</p>
+      <h1>Tessa<br>Anselm</h1>
+      <p class="hero-sub">
+        I started over during the hardest years of my life. While battling a serious illness during the pandemic with uncertain odds, I enrolled in school, earned a 4.0, and founded a cybersecurity chapter. Somewhere in that process I discovered that learning wasn't just something I wanted. It was something I needed. That drive has only grown since. I'm now pursuing a Master's at Georgia Tech, building deep expertise in cloud security, and nowhere near done.
+      </p>
+      <div class="hero-cta">
+        <a href="https://www.linkedin.com/in/tessa-anselm" target="_blank" class="btn btn-primary">LinkedIn</a>
+        <a href="https://github.com/TessaAnselm" target="_blank" class="btn btn-ghost">GitHub</a>
+        <a href="#projects" class="btn btn-ghost">View Projects</a>
+      </div>
+    </div>
+    <div>
+      <span class="hero-status">
+        <span class="pulse"></span>
+        Open to opportunities
+      </span>
+    </div>
+  </section>
 
-        <div class="box" id="projects">
-            <h2>My Projects</h2>
-            <p>
-                I actively document and share my hands-on cybersecurity and development projects on GitHub, covering a range of topics 
-                from penetration testing to web security automation. Here’s a glimpse of my work:
-            </p>
-        
-            <h3>📌 Daily Cyber Repository</h3>
+  <!-- FEATURED PROJECT -->
+  <section id="projects">
+    <p class="section-label">Featured Project</p>
 
-            <p><strong>Latest</strong></p>
-            <p>
-                I am currently working on completing my CPTS with Hack the Box (HTB) and decided to share some walkthrough:
-            </p>
-            <ul>
-                <li>🚶‍♀️ <strong>Latest HTB Walkthrough</strong> - Spoiler Alert!</li> 
-            
-            <p>🔗 <a href="https://github.com/TessaAnselm/DailyCyber/blob/main/Walkthrough/HTB_Information_Gathering_Skillset.md" target="_blank">Information Gathering</a></p>
-
-            </ul>
-            
-            <p><strong>What’s Inside Daily Cyber?</strong></p>
-            <ul>
-                <li>🚶‍♀️ <strong>Latest Hacking Walkthrough</strong> - Pentesting Vulnerable Machine</li> 
-                <li>🔍 <strong>Threat Hunting & Digital Forensics</strong> – Analyzing logs, malware analysis, and memory forensics.</li>
-                <li>💻 <strong>Penetration Testing</strong> – Web app security, network scanning, and privilege escalation.</li>
-                <li>🛡️ <strong>Defensive Security</strong> – SIEM setup, log analysis, and incident response exercises.</li>
-                <li>☁️ <strong>Cloud Security</strong> – Hands-on practice with AWS security, IAM policies, and attack simulations.</li>
-                <li>📜 <strong>Governance, Risk & Compliance (GRC)</strong> – Learning regulatory frameworks and compliance auditing.</li>
-                <li>⚙️ <strong>Automation & Scripting</strong> – Python and Bash scripts for cybersecurity tasks.</li>
-            </ul>
-            <p>🔗 <a href="https://github.com/TessaAnselm/DailyCyber" target="_blank">Daily Cyber Repository</a></p>
-        <br>
-            <h3>📌 Collegiate Cybersecurity Competitions</h3>
-            <p>
-                As part of my cybersecurity training, I have participated in 
-                <strong>CCDC (Collegiate Cyber Defense Competition)</strong> and 
-                <strong>CPTC (Collegiate Penetration Testing Competition)</strong>. 
-                I am actively working on documenting my experiences, strategies, and key takeaways in my repositories.
-            </p>
-            <p>🚧 <strong>Note:</strong> These repositories are a <strong>work in progress</strong> as I continue to add insights, analysis, and learning materials.</p>
-        
-            <h4>🔹 CCDC (Collegiate Cyber Defense Competition)</h4>
-            <ul>
-                <li>🚀 <strong>Blue Team Focus</strong> – Defensive strategies, incident response, and system hardening.</li>
-                <li>📊 <strong>SIEM Implementation & Monitoring</strong> – Analyzing security logs and mitigating real-time attacks.</li>
-                <li>🔐 <strong>Firewall & IDS Configuration</strong> – Setting up intrusion detection and traffic filtering.</li>
-                <li>📝 <strong>Documentation & Lessons Learned</strong> – Recap of scenarios, attack vectors, and defensive measures.</li>
-            </ul>
-            <p>🔗 <a href="https://github.com/TessaAnselm/2025_CCDC" target="_blank">CCDC (Work in Progress)</a></p>
-            <p>🔗 <a href="https://github.com/TessaAnselm/CCSF-WRCCDC" target="_blank">CCDC 2024 Documentation Repository </a></p>
-        
-            <h4>🔹 CPTC (Collegiate Penetration Testing Competition)</h4>
-            <ul>
-                <li>🕵️ <strong>Red Team Tactics</strong> – Simulating real-world attacks on enterprise environments.</li>
-                <li>💻 <strong>Vulnerability Assessment</strong> – Identifying and exploiting misconfigurations and security flaws.</li>
-                <li>📂 <strong>Exploit Development & Reporting</strong> – Writing professional penetration testing reports.</li>
-                <li>📜 <strong>Ethical Hacking & Compliance</strong> – Following responsible disclosure policies.</li>
-            </ul>
-            <p>🔗 <a href="https://github.com/TessaAnselm/CPTC" target="_blank">CPTC Documentation Repository (Work in Progress)</a></p>
-        <br>
-            <h3>📌 JavaScript School Projects</h3>
-            <p>Beyond cybersecurity, I have worked on several programming and web development projects, including JavaScript applications. </p>
-            <p>🔗 <a href="https://tessaanselm.github.io/cnit133A/Homework%201/homework1.html" target="_blank">Latest - Homework 1 for CNIT133A</a></p>
-            <p>🔗 <a href="https://raw.githack.com/TessaAnselm/cnit133-assignment/main/index.html" target="_blank">JavaScript Projects</a></p>
-            
-
-        
-            <h4>📌 Serving JavaScript Files via Raw.GitHack</h4>
-            <p>
-                <a href="https://raw.githack.com/" target="_blank">Raw.GitHack</a> is a useful tool for serving JavaScript, HTML, and CSS files 
-                directly from GitHub repositories with the correct <strong>Content-Type headers</strong>. 
-                It’s great for quick testing and demos without needing a separate web server.
-            </p>
-            <h4>⚠️ Security Disclaimer</h4>
-            <p>
-            This JavaScript project was developed for **learning and demonstration purposes** and **does not follow security best practices**.  
-            It contains **authentication details in the source code and runs entirely in the browser**, which means:
-            </p>
-<ul>
-    <li>❌ **Sensitive credentials are exposed** in the client-side code.</li>
-    <li>❌ **No proper authentication handling** (e.g., no secure token storage or server-side validation).</li>
-    <li>⚠️ **Vulnerable to attacks like token theft and API misuse**.</li>
-</ul>
-        
-            <h4>⚠️ Security Note</h4>
-            <p>
-                Raw.GitHack is best for <strong>development and testing</strong> but <strong>shouldn’t be used for production scripts</strong>, 
-                as it lacks security controls like <strong>Content Security Policy (CSP)</strong> and <strong>Subresource Integrity (SRI)</strong>.
-            </p>
-        
-            <p>🔗 <a href="https://raw.githack.com/" target="_blank">Visit Raw.GitHack</a> to learn more.</p>
+    <div class="featured-project">
+      <div class="project-header">
+        <div>
+          <p class="project-subtitle">Python · Flask · nmap · Threat Intelligence</p>
+          <h2 class="project-title">Home-Sentinel</h2>
+          <p style="font-size:13px; color:var(--text-muted); margin-top:6px;">Home network security monitor with real-time threat intelligence</p>
         </div>
-            
+        <span class="project-badge">Latest Build</span>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          Home-Sentinel is a Python and Flask-based network security monitoring tool that continuously scans your home network using nmap, identifies active hosts and open ports, and cross-references them against live threat intelligence feeds to surface potential risks — all through a clean web dashboard.
+        </p>
+        <div class="project-features">
+          <div class="feature-item"><span class="feature-dot"></span><span>Automated network scanning via nmap integration</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Real-time threat intel feed correlation</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Host discovery and open port enumeration</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Flask web dashboard for live monitoring</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Alert system for suspicious device behavior</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Designed for home SOC and lab environments</span></div>
         </div>
-
-        <div class="box" id="resources">
-            <h2>Cybersecurity Resources</h2>
-            <p>Some of my favorite learning resources:</p>
-            <ul>
-                <li><a href="https://www.blackhillsinfosec.com/tag/training/" target="_blank">Black Hills Infosec</a></li>
-                <li><a href="https://cyberdefenders.org/" target="_blank">Cyber Defenders</a></li>
-                <li><a href="https://www.hackthebox.com/" target="_blank">Hack The Box</a></li>
-                <li><a href="https://owasp.org/" target="_blank">OWASP</a></li>
-                <li><a href="https://portswigger.net/web-security" target="_blank">PortSwigger</a></li>
-                <li><a href="https://samsclass.info/" target="_blank">Sam Bowne</a></li>
-                <li><a href="https://tryhackme.com/" target="_blank">TryHackMe</a></li>
-    
-                
-                
-               
-            </ul>
+        <div class="tech-stack">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Flask</span>
+          <span class="tech-tag">nmap</span>
+          <span class="tech-tag">Threat Intelligence</span>
+          <span class="tech-tag">REST APIs</span>
+          <span class="tech-tag">Network Security</span>
+          <span class="tech-tag">SOC</span>
         </div>
-        <div class="box" id="media">
-            <h2>Media</h2>
-            <p>Here's promo videos I found myself in:</p>
-            <ul>
-                <li>📸 <a href="https://www.youtube.com/watch?v=WleUGJO7j4w" target="_blank">eCTF</a></li>
-            </ul>
-        </div>
-        <div class="box" id="contact">
-            <h2>Get in Touch</h2>
-            <p>Let's connect! Reach me on:</p>
-            <ul>
-                <li>💼 <a href="https://www.linkedin.com/in/tessa-anselm" target="_blank">LinkedIn</a></li>
-                <li>🐙 <a href="https://github.com/TessaAnselm" target="_blank">GitHub</a></li>
-            </ul>
-        </div>
+        <a href="https://github.com/TessaAnselm" target="_blank" class="btn btn-ghost">View on GitHub →</a>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- OTHER PROJECTS -->
+    <div class="project-grid">
+      <div class="project-card" style="display:flex; flex-direction:column;">
+        <p class="card-type">Blue Team · Competition · Co-Captain</p>
+        <p class="card-title">CCDC — Collegiate Cyber Defense</p>
+        <p class="card-desc">Co-captained CCSF's blue team in WRCCDC 2024 and CCDC 2025. Defended live enterprise infrastructure against a professional red team under realistic time pressure — no safety net, no pausing the attack.</p>
+        <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:16px;">
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">SIEM deployment and real-time log monitoring</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Firewall and IDS configuration under attack</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Incident response and system hardening</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Post-incident documentation and lessons learned</span></div>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
+          <span class="tech-tag">SIEM</span><span class="tech-tag">IDS/IPS</span><span class="tech-tag">Firewall</span><span class="tech-tag">IR</span><span class="tech-tag">Linux Hardening</span>
+        </div>
+        <div style="display:flex; gap:12px; margin-top:auto;">
+          <a href="https://github.com/TessaAnselm/2025_CCDC" target="_blank" class="card-link">2025 Repo →</a>
+          <a href="https://github.com/TessaAnselm/CCSF-WRCCDC" target="_blank" class="card-link">2024 Docs →</a>
+        </div>
+      </div>
+      <div class="project-card" style="display:flex; flex-direction:column;">
+        <p class="card-type">Red Team · Competition · Co-Captain</p>
+        <p class="card-title">CPTC — Collegiate Penetration Testing</p>
+        <p class="card-desc">Co-captained CCSF's red team. Conducted structured penetration tests against enterprise-grade target environments — from recon through reporting — following real-world engagement methodology and responsible disclosure practices.</p>
+        <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:16px;">
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Simulated attacks on live enterprise environments</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Vulnerability identification and exploitation</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Privilege escalation and lateral movement</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Professional pentest reports with remediation guidance</span></div>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
+          <span class="tech-tag">Recon</span><span class="tech-tag">Exploitation</span><span class="tech-tag">Privilege Escalation</span><span class="tech-tag">Reporting</span>
+        </div>
+        <a href="https://github.com/TessaAnselm/CPTC" target="_blank" class="card-link" style="margin-top:auto;">github.com/TessaAnselm →</a>
+      </div>
+      <a href="https://github.com/TessaAnselm/DailyCyber" target="_blank" class="project-card">
+        <p class="card-type">Learning · Ongoing</p>
+        <p class="card-title">Daily Cyber Repository</p>
+        <p class="card-desc">Daily documentation of HTB walkthroughs, malware analysis, SIEM setups, cloud attack simulations, and automation scripts.</p>
+        <span class="card-link">github.com/TessaAnselm →</span>
+      </a>
+      <div class="project-card">
+        <p class="card-type">Blue Team · Detection Engineering</p>
+        <p class="card-title">SIEM Monitoring Lab</p>
+        <p class="card-desc">Built a home SIEM environment using Splunk and ELK Stack to ingest system logs, develop detection rules for suspicious login patterns, and investigate simulated incidents by correlating IOCs across log sources.</p>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:auto; padding-top:12px;">
+          <span class="tech-tag">Splunk</span><span class="tech-tag">ELK Stack</span><span class="tech-tag">IOC Analysis</span><span class="tech-tag">Detection Rules</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <p class="card-type">Network Security · Forensics</p>
+        <p class="card-title">Network Traffic Analysis</p>
+        <p class="card-desc">Performed deep packet inspection with Wireshark to analyze DNS and HTTP traffic for anomalies. Built Python scripts to automate network reconnaissance and log analysis, with Pandas-based data pipelines and unit testing.</p>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:auto; padding-top:12px;">
+          <span class="tech-tag">Wireshark</span><span class="tech-tag">Python</span><span class="tech-tag">Pandas</span><span class="tech-tag">Recon Automation</span>
+        </div>
+      </div>
+      <a href="https://drive.google.com/file/d/1KXVNMRyGGXHVs_ht5GHZxnpdxBTt2H-Y/view?usp=drive_link" target="_blank" class="project-card">
+        <p class="card-type">Speaking · GRC</p>
+        <p class="card-title">Lightning Talks</p>
+        <p class="card-desc">Presented on Change Management Protocol and Pig Butchering Scam Awareness — communicating security concepts to non-technical audiences.</p>
+        <span class="card-link">View slides →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <p class="section-label">Experience</p>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div>
+          <p class="exp-title">Cybersecurity &amp; AI Application Engineer Intern</p>
+          <p class="exp-org">CyberTrust America</p>
+        </div>
+        <span class="exp-date">Jul 2025 – Oct 2025</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Conducted black-box penetration testing on an AI web application to identify security vulnerabilities, unexpected behaviors, and user-impacting issues.</li>
+        <li>Performed vulnerability testing using Burp Suite, Kali Linux, and Metasploit — findings mapped to OWASP Top 10 risk categories.</li>
+        <li>Assisted development teams with backend/frontend security validation during the development lifecycle.</li>
+        <li>Identified unnecessary cloud resource usage, helping reduce operational costs through improved cloud resource allocation.</li>
+        <li>Collaborated with developers and stakeholders using Agile workflows to document testing results and remediation recommendations.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div>
+          <p class="exp-title">Founder &amp; President — WiCyS CCSF Chapter</p>
+          <p class="exp-org">Women in Cybersecurity (WiCyS)</p>
+        </div>
+        <span class="exp-date">Jul 2024 – Dec 2025</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Founded and grew the chapter to 60+ active members, building one of CCSF's most active technical student communities.</li>
+        <li>Organized cybersecurity workshops, hands-on labs, and speaker events to develop student skills in the field.</li>
+        <li>Secured sponsorship from Pacific Hackers and student council organizations to fund training initiatives.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div>
+          <p class="exp-title">Student Tech Mentor &amp; Teaching Assistant</p>
+          <p class="exp-org">Bay Area Cyber</p>
+        </div>
+        <span class="exp-date">May 2024 – Nov 2024</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Mentored high school and college students in Wireshark, Burp Suite, and Kali Linux.</li>
+        <li>Delivered hands-on labs via TryHackMe, teaching penetration testing and network security fundamentals.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div>
+          <p class="exp-title">AI Workshop Assistant</p>
+          <p class="exp-org">DEF CON Training — Instructor: Sam Bowne</p>
+        </div>
+        <span class="exp-date">Aug 2024</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Provided technical setup and troubleshooting support for hands-on cybersecurity workshops at DEF CON training sessions.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS & CERTS -->
+  <section id="skills">
+    <p class="section-label">Skills &amp; Certifications</p>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <span class="stat-num">Top 2%</span>
+        <span class="stat-label">NCL Individual — Spring 2025</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">Top 3%</span>
+        <span class="stat-label">TryHackMe Global Ranking (2025)</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">60+</span>
+        <span class="stat-label">WiCyS chapter members founded</span>
+      </div>
+    </div>
+
+    <div class="skills-grid" style="margin-bottom:24px;">
+      <div class="skill-group">
+        <p class="skill-group-title">Security Tools</p>
+        <ul class="skill-list">
+          <li>Splunk &amp; ELK Stack (SIEM)</li>
+          <li>Burp Suite</li>
+          <li>Metasploit &amp; Kali Linux</li>
+          <li>Wireshark</li>
+          <li>Nmap &amp; Network Recon</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">Offensive Security</p>
+        <ul class="skill-list">
+          <li>Penetration Testing (Black-box &amp; Web App)</li>
+          <li>OWASP Top 10</li>
+          <li>Privilege Escalation</li>
+          <li>Vulnerability Assessment</li>
+          <li>Exploit Development &amp; Reporting</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">Defensive &amp; Cloud Security</p>
+        <ul class="skill-list">
+          <li>Incident Response &amp; SOC Operations</li>
+          <li>Threat Hunting &amp; MITRE ATT&amp;CK</li>
+          <li>AWS, GCP &amp; Azure Security</li>
+          <li>IAM Policies &amp; Cloud Hardening</li>
+          <li>NIST &amp; NIST CSF</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">Programming &amp; Networking</p>
+        <ul class="skill-list">
+          <li>Python, Bash, JavaScript, SQL, Java</li>
+          <li>TCP/IP, DNS, OSI Model</li>
+          <li>Network Traffic Analysis</li>
+          <li>Firewall &amp; IDS Configuration</li>
+          <li>Linux Scripting &amp; Automation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cert-list">
+      <div class="cert-item">
+        <span class="cert-name">Certificate of Cloud Security Knowledge (CCSK) v5</span>
+        <span class="cert-meta"><span class="cert-issuer">Cloud Security Alliance</span><span class="cert-year">2025</span></span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">CompTIA A+</span>
+        <span class="cert-meta"><span class="cert-issuer">CompTIA</span><span class="cert-year">2025</span></span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">CompTIA Security X (formerly CASP+)</span>
+        <span class="cert-meta"><span class="cert-issuer">CompTIA</span><span class="cert-year">2024</span></span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">CompTIA Security+</span>
+        <span class="cert-meta"><span class="cert-issuer">CompTIA</span><span class="cert-year">2024</span></span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">AWS Certified Cloud Practitioner</span>
+        <span class="cert-meta"><span class="cert-issuer">Amazon Web Services</span><span class="cert-year">2023</span></span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">Certified in Cybersecurity (CC)</span>
+        <span class="cert-meta"><span class="cert-issuer">ISC2</span><span class="cert-year">2023</span></span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">GRC Analyst Master Class</span>
+        <span class="cert-meta"><span class="cert-issuer">Simply Cyber</span><span class="cert-year">2023</span></span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">Microsoft Azure Fundamentals (AZ-900)</span>
+        <span class="cert-meta"><span class="cert-issuer">Microsoft</span><span class="cert-year">2022</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <p class="section-label">Education</p>
+
+    <div class="edu-card" style="border-color: var(--border-accent);">
+      <div class="edu-header">
+        <div>
+          <p class="edu-degree">M.S. Cybersecurity</p>
+          <p class="edu-school">Georgia Institute of Technology</p>
+        </div>
+        <span class="edu-years">Current</span>
+      </div>
+      <ul class="edu-highlights">
+        <li>4.0 GPA (1 course completed)</li>
+        <li>CS 6035 Introduction to Information Security — A</li>
+      </ul>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-header">
+        <div>
+          <p class="edu-degree">A.S. Computer Networking &amp; IT — Cybersecurity</p>
+          <p class="edu-school">City College of San Francisco</p>
+        </div>
+        <span class="edu-years">2021 – 2025</span>
+      </div>
+      <ul class="edu-highlights">
+        <li>Dean's Honor List — 4.0 GPA</li>
+        <li>President, WiCyS Student Chapter</li>
+        <li>CPTC &amp; WRCCDC Co-Captain</li>
+        <li>ECTF Mitre Embedded System Participant</li>
+        <li>Top 2% Individual — National Cyber League (NCL) Spring 2025</li>
+      </ul>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-header">
+        <div>
+          <p class="edu-degree">B.S. Electrical Engineering</p>
+          <p class="edu-school">Trine University</p>
+        </div>
+      </div>
+      <ul class="edu-highlights">
+        <li>National Dean's List</li>
+        <li>President, Society of Women Engineers (SWE)</li>
+        <li>Internships at Argonne National Laboratory, Dana Corporation &amp; Maxim Integrated Products</li>
+        <li>Track Scholarship recipient</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-label">Get in Touch</p>
+    <p style="color:var(--text-muted); margin-bottom:24px; font-size:15px;">
+      Open to cloud security roles, cybersecurity engineering positions, and interesting collaboration.
+    </p>
+    <div class="contact-bar">
+      <a href="https://www.linkedin.com/in/tessa-anselm" target="_blank" class="contact-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/TessaAnselm" target="_blank" class="contact-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <a href="https://www.youtube.com/watch?v=WleUGJO7j4w" target="_blank" class="contact-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        eCTF Feature
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>Tessa Anselm — Cybersecurity Portfolio</span>
+  <span>Built for clarity. Designed to impress.</span>
+</footer>
 
 </body>
 </html>
