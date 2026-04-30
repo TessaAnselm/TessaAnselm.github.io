@@ -51,34 +51,37 @@
     <div class="featured-project">
       <div class="project-header">
         <div>
-          <p class="project-subtitle">Python · Flask · nmap · Threat Intelligence</p>
+          <p class="project-subtitle">Python · Flask · nmap · SQLite · Chart.js · MITRE ATT&amp;CK</p>
           <h2 class="project-title">Home-Sentinel</h2>
-          <p style="font-size:13px; color:var(--text-muted); margin-top:6px;">Home network security monitor with real-time threat intelligence</p>
+          <p style="font-size:13px; color:var(--text-muted); margin-top:6px;">Local home network security monitor — no cloud, no cost, setup in under 15 minutes</p>
         </div>
         <span class="project-badge">Latest Build</span>
       </div>
       <div class="project-body">
         <p class="project-desc">
-          Home-Sentinel is a Python and Flask-based network security monitoring tool that continuously scans your home network using nmap, identifies active hosts and open ports, and cross-references them against live threat intelligence feeds to surface potential risks — all through a clean web dashboard.
+          A full-stack network security monitoring tool that tracks devices by MAC address, detects anomalies, maps every alert to a MITRE ATT&amp;CK technique, and surfaces live CVEs — running entirely on your machine. Cross-references five free threat intelligence feeds and assigns each device a live 0–100 risk score with contributing factors.
         </p>
         <div class="project-features">
-          <div class="feature-item"><span class="feature-dot"></span><span>Automated network scanning via nmap integration</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span>Real-time threat intel feed correlation</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span>Host discovery and open port enumeration</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span>Flask web dashboard for live monitoring</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span>Alert system for suspicious device behavior</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span>Designed for home SOC and lab environments</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>MAC-based device tracking — not fragile IPs</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Every alert mapped to a MITRE ATT&amp;CK technique</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Live 0–100 risk score per device with contributing factors</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>5 threat intel feeds: AbuseIPDB, OTX, NIST NVD, CISA KEV, Feodo</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Bot detection — port scans, C2 beacons, lateral movement</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Baseline comparison — alerts on any port state deviation</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Runs automatically via macOS launchd, no manual steps</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Fully local — no data leaves your machine</span></div>
         </div>
         <div class="tech-stack">
-          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Python 3</span>
           <span class="tech-tag">Flask</span>
           <span class="tech-tag">nmap</span>
+          <span class="tech-tag">SQLite</span>
+          <span class="tech-tag">Chart.js</span>
+          <span class="tech-tag">MITRE ATT&amp;CK</span>
           <span class="tech-tag">Threat Intelligence</span>
-          <span class="tech-tag">REST APIs</span>
-          <span class="tech-tag">Network Security</span>
-          <span class="tech-tag">SOC</span>
+          <span class="tech-tag">macOS launchd</span>
         </div>
-        <a href="https://github.com/TessaAnselm" target="_blank" class="btn btn-ghost">View on GitHub →</a>
+        <a href="https://github.com/TessaAnselm/Home-Sentinel" target="_blank" class="btn btn-ghost">View on GitHub →</a>
       </div>
     </div>
 
