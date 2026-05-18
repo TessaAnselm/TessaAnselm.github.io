@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tessa Anselm — Resume</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --accent: #1a6b3c;
+    --text: #111;
+    --muted: #444;
+    --dim: #777;
+    --border: #ccc;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: var(--text);
+    background: #eee;
+    line-height: 1.55;
+  }
+
+  .print-bar {
+    background: #111;
+    color: #fff;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .print-bar span { font-size: 11px; color: #888; }
+
+  .print-btn {
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    background: #00cc6e;
+    color: #000;
+    border: none;
+    padding: 7px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .print-btn:hover { background: #00ff88; }
+
+  .page {
+    max-width: 800px;
+    margin: 28px auto;
+    background: #fff;
+    padding: 44px 52px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  }
+
+  /* HEADER */
+  .resume-name {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+
+  .resume-contact {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .resume-contact a { color: var(--muted); text-decoration: none; }
+  .resume-contact a:hover { color: var(--accent); }
+  .sep { margin: 0 6px; color: var(--border); }
+
+  hr { border: none; border-top: 1.5px solid var(--text); margin-bottom: 14px; }
+
+  /* SECTIONS */
+  .section { margin-bottom: 18px; }
+
+  .section-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  /* SUMMARY */
+  .summary { color: var(--muted); line-height: 1.6; }
+
+  /* SKILLS */
+  .skills-list { display: flex; flex-direction: column; gap: 5px; }
+  .skill-row { font-size: 12.5px; line-height: 1.5; }
+  .skill-cat { font-weight: 700; }
+  .skill-vals { color: var(--muted); }
+
+  /* EXPERIENCE */
+  .exp-item { margin-bottom: 13px; }
+
+  .exp-title { font-weight: 700; font-size: 13px; }
+
+  .exp-meta {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 5px;
+  }
+
+  .exp-meta .org { color: var(--accent); font-weight: 700; }
+
+  ul.bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding-left: 2px;
+  }
+
+  ul.bullets li {
+    color: var(--muted);
+    font-size: 12.5px;
+    display: flex;
+    gap: 7px;
+    line-height: 1.55;
+  }
+
+  ul.bullets li::before {
+    content: '•';
+    color: var(--text);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* EDUCATION */
+  .edu-item { margin-bottom: 13px; }
+  .edu-degree { font-weight: 700; font-size: 13px; }
+  .edu-school { font-size: 12px; color: var(--accent); font-weight: 700; margin-bottom: 2px; }
+  .edu-meta { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+
+  /* CERTS */
+  .cert-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px 24px;
+  }
+
+  .cert-entry {
+    font-size: 12.5px;
+    color: var(--muted);
+    display: flex;
+    gap: 7px;
+  }
+
+  .cert-entry::before { content: '•'; color: var(--text); }
+
+  /* PRINT */
+  @media print {
+    body { background: #fff; }
+    .print-bar { display: none; }
+    .page {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+    .exp-meta .org { color: #000; }
+    .edu-school { color: #000; }
+    @page { margin: 0.6in; size: letter; }
+  }
+</style>
+</head>
+<body>
+
+<div class="print-bar">
+  <span>tessaanselm.github.io / resume</span>
+  <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<div class="page">
+
+  <div class="resume-name">Teresita (Tessa) Anselm</div>
+  <div class="resume-contact">
+    San Francisco, CA
+    <span class="sep">|</span>
+    <a href="mailto:tessa.anselm@gmail.com">tessa.anselm@gmail.com</a>
+    <span class="sep">|</span>
+    <a href="https://linkedin.com/in/tessa-anselm" target="_blank">LinkedIn</a>
+    <span class="sep">|</span>
+    <a href="https://github.com/TessaAnselm" target="_blank">GitHub</a>
+    <span class="sep">|</span>
+    <a href="https://tessaanselm.github.io" target="_blank">tessaanselm.github.io</a>
+  </div>
+
+  <hr>
+
+  <section class="section">
+    <div class="section-title">Professional Summary</div>
+    <p class="summary">Customer-facing cybersecurity and AI security professional with experience in API security testing, cloud security, technical workshops, and stakeholder communication. Combines security engineering fundamentals with strong presentation, troubleshooting, and technical translation skills to help technical and non-technical audiences understand complex systems and security concepts. Experienced supporting web applications, cloud infrastructure, and AI-related workflows in collaborative environments.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Skills</div>
+    <div class="skills-list">
+      <div class="skill-row"><span class="skill-cat">Solutions Engineering &amp; Communication: </span><span class="skill-vals">Technical presentations, workshops, product demonstrations, stakeholder communication, technical translation, troubleshooting, customer engagement, cross-functional collaboration</span></div>
+      <div class="skill-row"><span class="skill-cat">APIs &amp; Web Technologies: </span><span class="skill-vals">REST APIs, Postman, Swagger/OpenAPI, JSON, API testing, HTTP protocols, web application workflows</span></div>
+      <div class="skill-row"><span class="skill-cat">Cloud &amp; Infrastructure: </span><span class="skill-vals">AWS, Azure Fundamentals, GCP Foundations, Docker, Kubernetes, Terraform, AWS CloudFormation, cloud security concepts</span></div>
+      <div class="skill-row"><span class="skill-cat">Security Tooling &amp; Networking: </span><span class="skill-vals">Burp Suite, Wireshark, Splunk, Nessus, Kali Linux, OWASP Top 10, TCP/IP, DNS, OSI Model, network security monitoring</span></div>
+      <div class="skill-row"><span class="skill-cat">Programming: </span><span class="skill-vals">Python, Bash, Java, JavaScript, SQL, HTML/CSS</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Experience</div>
+
+    <div class="exp-item">
+      <div class="exp-title">Cybersecurity &amp; AI Application Engineer Intern</div>
+      <div class="exp-meta"><span class="org">CyberTrust America</span> | Jul 2025 – Oct 2025</div>
+      <ul class="bullets">
+        <li>Performed API and web application security testing using Postman and Burp Suite to analyze authentication workflows and identify OWASP Top 10 vulnerabilities.</li>
+        <li>Collaborated with developers and stakeholders in Agile environments to communicate findings, support remediation efforts, and improve application security posture.</li>
+        <li>Supported backend and frontend security validation for AI-related web applications and authentication workflows.</li>
+        <li>Identified inefficient cloud resource usage and recommended improvements for operational efficiency and cost optimization.</li>
+        <li>Created technical documentation and communicated complex technical concepts to both technical and non-technical audiences.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-title">Founder &amp; President</div>
+      <div class="exp-meta"><span class="org">Women in Cybersecurity (WiCyS) — CCSF Chapter</span> | Jul 2024 – Dec 2025</div>
+      <ul class="bullets">
+        <li>Founded and grew the WiCyS CCSF chapter to more than 60 active members through technical workshops, presentations, and community initiatives.</li>
+        <li>Coordinated cybersecurity workshops, hands-on labs, and technical events with sponsors, student organizations, and industry professionals.</li>
+        <li>Presented technical concepts and guided participants with varying technical backgrounds through practical demonstrations and collaborative learning.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-title">Student Tech Mentor &amp; Teaching Assistant</div>
+      <div class="exp-meta"><span class="org">Bay Area Cyber</span> | May 2024 – Nov 2024</div>
+      <ul class="bullets">
+        <li>Mentored students on cybersecurity tools, networking concepts, and technical workflows through guided labs and hands-on exercises.</li>
+        <li>Provided troubleshooting support during workshops and cybersecurity lab exercises involving networking and security tools.</li>
+        <li>Simplified complex technical concepts into accessible learning experiences for students with varying technical backgrounds.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-title">AI Workshop Assistant</div>
+      <div class="exp-meta"><span class="org">DEF CON Training — Supporting Instructor Sam Bowne</span> | Aug 2024</div>
+      <ul class="bullets">
+        <li>Supported participants during hands-on cybersecurity workshops by troubleshooting technical environments and assisting with lab delivery.</li>
+        <li>Assisted with technical setup, workshop coordination, and participant support during live cybersecurity training sessions.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-title">Family Support Specialist — Client Services &amp; Relationship Management</div>
+      <div class="exp-meta"><span class="org">Self-Employed</span> | 2005 – Present</div>
+      <ul class="bullets">
+        <li>Built long-term client relationships through communication, trust, and reliability under high-pressure conditions.</li>
+        <li>Managed high-pressure situations requiring adaptability, real-time problem solving, and clear communication.</li>
+        <li>Coordinated expectations with diverse stakeholders while maintaining responsive client support.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Technical Projects</div>
+
+    <div class="exp-item">
+      <div class="exp-title">Kubernetes Supply Chain Security Research Lab</div>
+      <ul class="bullets">
+        <li>Developed a Kubernetes-focused security research lab demonstrating real-world supply chain attack scenarios involving AI infrastructure and dependency compromise.</li>
+        <li>Simulated multi-stage attack workflows in isolated local environments using Kubernetes, Docker, and Bash automation.</li>
+        <li>Documented attack paths, indicators of compromise, and mitigation concepts aligned with cloud-native security practices.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-title">Home Sentinel — Home Network Monitoring Platform</div>
+      <ul class="bullets">
+        <li>Built a Python and Flask-based home network monitoring platform focused on traffic visibility, monitoring workflows, and real-time alerting.</li>
+        <li>Applied network monitoring and security analysis concepts aligned with detection and traffic visibility workflows.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-title">Java &amp; Web Application Security Labs — Georgia Tech CS6035</div>
+      <ul class="bullets">
+        <li>Explored Log4Shell, SQLi, XSS, XSRF, and API security weaknesses using Postman, Burp Suite, and HTTP inspection tools in reproducible lab environments.</li>
+        <li>Investigated OWASP Top 10 vulnerabilities and documented security risks, exploitation paths, and mitigation concepts.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-title">Cloud Infrastructure &amp; Security Labs</div>
+      <ul class="bullets">
+        <li>Built hands-on cloud infrastructure using AWS CloudFormation, CloudTrail, Route 53 Resolver Logs, and IAM governance controls with IaC best practices.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Education</div>
+
+    <div class="edu-item">
+      <div class="edu-degree">M.S. Cybersecurity</div>
+      <div class="edu-school">Georgia Institute of Technology</div>
+      <div class="edu-meta">4.0 GPA | Expected 2028</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-degree">A.S. Computer Networking &amp; Information Technology — Cybersecurity Focus</div>
+      <div class="edu-school">City College of San Francisco</div>
+      <div class="edu-meta">Dean's Honor List, 4.0 GPA | May 2025</div>
+      <ul class="bullets">
+        <li>Certificate of Achievement in Cloud Computing Administration</li>
+        <li>Certificate of Achievement in Network Security and Cybersecurity</li>
+        <li>Co-Captain, WRCCDC &amp; CPTC Collegiate Cybersecurity Competition Teams</li>
+      </ul>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-degree">B.S. Electrical Engineering</div>
+      <div class="edu-school">Trine University</div>
+      <ul class="bullets">
+        <li>National Dean's List | President, Society of Women Engineers (SWE) | Track Scholarship Recipient</li>
+        <li>Internship Experience: Argonne National Laboratory, Dana Corporation, Maxim Integrated Products</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Certifications</div>
+    <div class="cert-grid">
+      <div class="cert-entry">CompTIA SecurityX (formerly CASP+)</div>
+      <div class="cert-entry">Cloud Security Alliance CCSK</div>
+      <div class="cert-entry">CompTIA Security+</div>
+      <div class="cert-entry">AWS Certified Cloud Practitioner</div>
+      <div class="cert-entry">CompTIA A+</div>
+      <div class="cert-entry">ISC2 Certified in Cybersecurity (CC)</div>
+      <div class="cert-entry">Microsoft AZ-900</div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
