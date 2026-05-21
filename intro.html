@@ -9,6 +9,8 @@
 </head>
 <body>
 
+<div id="aurora"></div>
+
 <nav>
   <span class="nav-logo">tessa@anselm:~$</span>
   <ul class="nav-links">
@@ -37,6 +39,7 @@
       <div class="hero-cta">
         <a href="https://www.linkedin.com/in/tessa-anselm" target="_blank" class="btn btn-primary">LinkedIn</a>
         <a href="https://github.com/TessaAnselm" target="_blank" class="btn btn-ghost">GitHub</a>
+        <a href="resume.html" target="_blank" class="btn btn-ghost">Resume</a>
         <a href="#projects" class="btn btn-ghost">View Projects</a>
       </div>
     </div>
@@ -48,91 +51,127 @@
     </div>
   </section>
 
-  <!-- FEATURED PROJECT -->
+  <!-- PROJECTS -->
   <section id="projects">
-    <p class="section-label">Featured Project</p>
+    <p class="section-label">Current Project</p>
 
-    <div class="featured-project">
+    <div class="featured-project" id="current-project-card">
       <div class="project-header">
         <div>
-          <p class="project-subtitle">Kubernetes · MITRE ATT&amp;CK · CVE Research · Bash · HTML/CSS/JS</p>
-          <h2 class="project-title">K8s Security Lab</h2>
-          <p style="font-size:13px; color:var(--text-muted); margin-top:6px;">Interactive CVE reference, MITRE ATT&amp;CK framework, and fully runnable POC simulation of the 2026 LiteLLM supply chain attack</p>
+          <p class="project-subtitle">Python 3.12 · Temporal · FastAPI · PostgreSQL · MCP · Docker</p>
+          <h2 class="project-title">Bug Bounty Research Platform</h2>
+          <p style="font-size:13px; color:var(--text-muted); margin-top:6px;">A fully local, ethics-first research platform for structured bug bounty hunting with automated recon pipelines, finding lifecycle tracking, and a live MCP server so Claude Code can query recon data in context</p>
         </div>
-        <span class="project-badge">Latest Build</span>
+        <span class="project-badge">V1 Complete — Hunting</span>
       </div>
       <div class="project-body">
         <p class="project-desc">
-          A single-page security research site covering 90+ real Kubernetes CVEs from 2016 to 2026, mapped to the MITRE ATT&amp;CK framework. Features a fully runnable bash-based POC that simulates the LiteLLM/TeamPCP supply chain attack — the largest AI tooling compromise to date — including credential harvesting, Kubernetes lateral movement, and persistent backdoor installation, all safely on localhost via minikube.
+          Built for depth over breadth. The goal is finding logic flaws and chained vulnerabilities that automated tools miss. Four Temporal workflows handle program onboarding, automated recon, continuous monitoring, and finding lifecycle — all feeding into a 9-table PostgreSQL database. A private FastAPI dashboard shows program scores, new asset alerts, and a finding pipeline sorted by status. Phase 1 is active targeting IDOR and API security. First program: Anthropic on HackerOne.
         </p>
         <div class="project-features">
-          <div class="feature-item"><span class="feature-dot"></span><span>90+ CVEs with sortable timeline, severity filters, and click-to-expand detection commands</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span>MITRE ATT&amp;CK tactic highlighter — click any tactic to highlight related CVEs in the timeline</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span>LiteLLM POC — 3-stage payload: credential harvester, K8s lateral movement, systemd backdoor</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span>Real IOC panel: compromised package versions, file paths, C2 domains, K8s artifacts</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span>3 lab modules with 9 scenarios — browser-tracked progress with checkboxes</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span>Fully split codebase: separate CSS, JS, and data files following best practices</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Four Temporal workflows covering onboarding, automated recon, continuous monitoring, and finding lifecycle</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Full recon pipeline: subdomain discovery, port probing, web crawling, URL mining, screenshots, and secret scanning</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Nine-table schema tracking programs, assets, findings, alerts, outcomes, and artifacts</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Private dashboard with program scores, new asset diffs, and a kanban-style finding pipeline</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Read-only MCP server so Claude Code can query live recon data directly in conversation</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Every push runs gitleaks, Snyk, Semgrep, and pytest automatically — zero open issues</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Human approval required at every step: scope validation, confidence scoring, no autonomous exploitation</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span>Hunting in phases: IDOR and API security first, then OAuth and authentication, then AI and LLM vulnerabilities</span></div>
         </div>
         <div class="tech-stack">
-          <span class="tech-tag">Kubernetes</span>
-          <span class="tech-tag">MITRE ATT&amp;CK</span>
-          <span class="tech-tag">Supply Chain</span>
-          <span class="tech-tag">CVE Research</span>
-          <span class="tech-tag">minikube</span>
-          <span class="tech-tag">Bash</span>
-          <span class="tech-tag">HTML/CSS/JS</span>
+          <span class="tech-tag">Python 3.12</span>
+          <span class="tech-tag">Temporal OSS</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">MCP</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">subfinder</span>
+          <span class="tech-tag">Snyk</span>
+          <span class="tech-tag">Semgrep</span>
+          <span class="tech-tag">GitHub Actions</span>
         </div>
         <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a href="https://TessaAnselm.github.io/K8" target="_blank" class="btn btn-primary">View Live Site →</a>
-          <a href="https://github.com/TessaAnselm/K8" target="_blank" class="btn btn-ghost">GitHub →</a>
+          <a href="https://github.com/TessaAnselm/bug-bounty-platform" target="_blank" class="btn btn-github">GitHub</a>
         </div>
       </div>
     </div>
 
-    <!-- OTHER PROJECTS -->
+    <p class="section-label">Projects</p>
+
     <div class="project-grid">
 
-      <!-- Home-Sentinel moved to grid -->
-      <a href="https://github.com/TessaAnselm/Home-Sentinel" target="_blank" class="project-card" style="display:flex; flex-direction:column; grid-column: span 2;">
-        <p class="card-type">Python · Flask · nmap · SQLite · Chart.js · MITRE ATT&amp;CK</p>
-        <p class="card-title">Home-Sentinel</p>
-        <p class="card-desc">A full-stack network security monitoring tool that tracks devices by MAC address, detects anomalies, maps every alert to a MITRE ATT&amp;CK technique, and surfaces live CVEs — running entirely on your machine. Cross-references five free threat intelligence feeds and assigns each device a live 0–100 risk score with contributing factors.</p>
+      <div class="project-card" style="display:flex; flex-direction:column;">
+        <p class="card-type">Kubernetes · MITRE ATT&amp;CK · CVE Research · Bash · HTML/CSS/JS</p>
+        <p class="card-title">K8s Security Lab</p>
+        <p class="card-desc">A security research site covering 90+ real Kubernetes CVEs from 2016 to 2026, mapped to MITRE ATT&amp;CK. Includes a fully runnable Bash simulation of the 2026 LiteLLM supply chain attack — the largest AI tooling compromise to date.</p>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:5px; margin:12px 0;">
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">MAC-based device tracking — not fragile IPs</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">90+ CVEs with a sortable timeline and severity filters</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">MITRE ATT&amp;CK tactic highlighter that maps to related CVEs</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">LiteLLM attack simulation: credential theft, lateral movement, and persistent backdoor</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Real indicator panel with compromised packages, C2 domains, and Kubernetes artifacts</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Three lab modules with nine scenarios and browser-tracked progress</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Runs safely on localhost via minikube, no cloud required</span></div>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; padding-top:8px; margin-top:auto;">
+          <span class="tech-tag">Kubernetes</span><span class="tech-tag">MITRE ATT&amp;CK</span><span class="tech-tag">Supply Chain</span><span class="tech-tag">CVE Research</span><span class="tech-tag">Bash</span>
+        </div>
+        <div style="display:flex; gap:16px; margin-top:12px;">
+          <a href="https://TessaAnselm.github.io/K8" target="_blank" class="card-link">Live Site →</a>
+          <a href="https://github.com/TessaAnselm/K8" target="_blank" class="card-link">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card" style="display:flex; flex-direction:column;">
+        <p class="card-type">Python · Flask · Playwright · Anthropic · Temporal</p>
+        <p class="card-title">Custom Job Search Execution</p>
+        <p class="card-desc">An intelligent job search system that scrapes eight boards at once, scores every listing against your resume using AI, and generates tailored cover letters. Nothing gets sent without human review first.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:5px; margin:12px 0;">
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Pulls from LinkedIn, Indeed, HN, Remotive, Wellfound, Greenhouse, and more</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Each listing scored on title fit, skills, salary range, location, and industry</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Generates tailored cover letters and resume edits per listing</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Works with Anthropic, OpenAI, Google, Groq, and local Ollama</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Optional Temporal workflows for follow-up reminders and durable state</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Tracks applications in Google Sheets with MCP tools for automation</span></div>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; padding-top:8px; margin-top:auto;">
+          <span class="tech-tag">Python 3</span><span class="tech-tag">Flask</span><span class="tech-tag">Playwright</span><span class="tech-tag">Anthropic</span><span class="tech-tag">Temporal</span><span class="tech-tag">MCP</span>
+        </div>
+        <a href="https://github.com/TessaAnselm/Custom-Job-Search-Execution" target="_blank" class="card-link" style="margin-top:12px;">github.com/TessaAnselm/Custom-Job-Search-Execution →</a>
+      </div>
+
+      <div class="project-card" style="display:flex; flex-direction:column;">
+        <p class="card-type">Python · Flask · Threat Intelligence</p>
+        <p class="card-title">Home-Sentinel</p>
+        <p class="card-desc">A full-stack home network security monitor that tracks every device by MAC address, maps alerts to MITRE ATT&amp;CK techniques, cross-references five threat intel feeds, and gives each device a live risk score. Runs entirely on your machine.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:5px; margin:12px 0;">
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Tracks devices by MAC address, not fragile IPs</span></div>
           <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Every alert mapped to a MITRE ATT&amp;CK technique</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Live 0–100 risk score per device with contributing factors</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">5 threat intel feeds: AbuseIPDB, OTX, NIST NVD, CISA KEV, Feodo</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Bot detection — port scans, C2 beacons, lateral movement</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Baseline comparison — alerts on any port state deviation</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Runs automatically via macOS launchd, no manual steps</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Live 0 to 100 risk score per device with contributing factors</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Five threat intel feeds: AbuseIPDB, OTX, NIST NVD, CISA KEV, Feodo</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Detects port scans, C2 beacons, and lateral movement patterns</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Alerts on any port state deviation from a known baseline</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Runs automatically via macOS launchd with no manual steps</span></div>
           <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Fully local — no data leaves your machine</span></div>
         </div>
         <div style="display:flex; gap:8px; flex-wrap:wrap; padding-top:8px; margin-top:auto;">
-          <span class="tech-tag">Python 3</span>
-          <span class="tech-tag">Flask</span>
-          <span class="tech-tag">nmap</span>
-          <span class="tech-tag">SQLite</span>
-          <span class="tech-tag">Chart.js</span>
-          <span class="tech-tag">MITRE ATT&amp;CK</span>
-          <span class="tech-tag">Threat Intelligence</span>
-          <span class="tech-tag">macOS launchd</span>
+          <span class="tech-tag">Python 3</span><span class="tech-tag">Flask</span><span class="tech-tag">nmap</span><span class="tech-tag">SQLite</span><span class="tech-tag">MITRE ATT&amp;CK</span><span class="tech-tag">Threat Intel</span>
         </div>
-        <span class="card-link" style="margin-top:12px;">github.com/TessaAnselm/Home-Sentinel →</span>
-      </a>
+        <a href="https://github.com/TessaAnselm/Home-Sentinel" target="_blank" class="card-link" style="margin-top:12px;">github.com/TessaAnselm/Home-Sentinel →</a>
+      </div>
 
       <a href="https://github.com/TessaAnselm/DailyCyber" target="_blank" class="project-card" style="display:flex; flex-direction:column;">
         <p class="card-type">Learning · Ongoing · HTB CPTS</p>
         <p class="card-title">Daily Cyber Repository</p>
-        <p class="card-desc">Ongoing hands-on security research and practice, organized by domain. Covers both offensive and defensive techniques with writeups, walkthroughs, and reference materials built up over time.</p>
+        <p class="card-desc">Ongoing hands-on security research and practice organized by domain. Covers both offensive and defensive techniques with writeups, walkthroughs, and reference materials built up over time.</p>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:5px; margin:12px 0;">
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Exploitation — SSTI, command injection, PHP-FPM, buffer overflow</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Cryptography — AES cracking, RSA, two-time pad, Caesar cipher</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Application Security — JWT security, decompiling pyc files</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">AI Security — prompt injection, ML with TensorFlow</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">SOC / Blue Team — Black Hills 4-day training</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">HTB Walkthroughs — footprinting, information gathering, CPTS path</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">OWASP WebGoat — web vulnerability practice</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">AMD/ARM exploitation and architecture research</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Exploitation: SSTI, command injection, PHP-FPM, buffer overflow</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Cryptography: AES cracking, RSA, two-time pad, Caesar cipher</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Application Security: JWT attacks and decompiling pyc files</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">AI Security: prompt injection and ML with TensorFlow</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">SOC and Blue Team: Black Hills 4-day training</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">HTB walkthroughs covering footprinting and the CPTS path</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">OWASP WebGoat for web vulnerability practice</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">AMD and ARM exploitation and architecture research</span></div>
         </div>
         <div style="display:flex; gap:8px; flex-wrap:wrap; padding-top:8px; margin-top:auto;">
           <span class="tech-tag">HTB</span><span class="tech-tag">SSTI</span><span class="tech-tag">JWT</span><span class="tech-tag">Cryptography</span><span class="tech-tag">Prompt Injection</span><span class="tech-tag">WebGoat</span><span class="tech-tag">SOC</span>
@@ -143,39 +182,39 @@
       <div class="project-card" style="display:flex; flex-direction:column;">
         <p class="card-type">Graduate Coursework · Georgia Tech · Grade: A</p>
         <p class="card-title">CS 6035 — Introduction to Information Security</p>
-        <p class="card-desc">Nine hands-on security projects spanning offensive and defensive domains, completed as part of the M.S. Cybersecurity (Information Security) program at Georgia Tech. Each project involved real tools, scripted exploits, and flag-based CTF challenges in a controlled environment.</p>
+        <p class="card-desc">Nine hands-on security projects completed as part of the M.S. Cybersecurity program at Georgia Tech. Each project used real tools, scripted exploits, and flag-based CTF challenges in a controlled environment.</p>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:5px; margin:12px 0;">
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">MITM / PCAP Analysis — Wireshark, pyShark, John the Ripper</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Machine Learning for malware detection — Pandas, Scikit-learn</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">API Security — JWT attacks, broken access control, SSRF</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Web Security — XSS, CSRF, SQLi, server misconfiguration</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Log4Shell — CVE-2021-44228 JNDI exploitation lab</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Database Security — SQL injection, inference attacks</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Malware Analysis — static and dynamic analysis, JoeSandbox</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Binary Exploitation — control flow hijacking, memory vulnerabilities</span></div>
-          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Cryptography — symmetric and asymmetric systems, exploit weak implementations</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">MITM and PCAP analysis with Wireshark, pyShark, and John the Ripper</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Machine learning for malware detection using Pandas and Scikit-learn</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">API security: JWT attacks, broken access control, and SSRF</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Web security: XSS, CSRF, SQL injection, and server misconfiguration</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Log4Shell exploitation lab (CVE-2021-44228)</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Database security: SQL injection and inference attacks</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Malware analysis using static and dynamic techniques with JoeSandbox</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Binary exploitation: control flow hijacking and memory vulnerabilities</span></div>
+          <div class="feature-item"><span class="feature-dot"></span><span style="font-size:11px; color:var(--text-muted);">Cryptography: breaking weak symmetric and asymmetric implementations</span></div>
         </div>
         <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:auto; padding-top:8px;">
           <span class="tech-tag">JWT</span><span class="tech-tag">SQLi</span><span class="tech-tag">XSS</span><span class="tech-tag">Log4Shell</span><span class="tech-tag">Binary Exploitation</span><span class="tech-tag">Cryptography</span><span class="tech-tag">ML</span><span class="tech-tag">PCAP</span>
         </div>
       </div>
 
-      <div class="project-card" style="display:flex; flex-direction:column; grid-column: span 2;">
+      <div class="project-card" style="display:flex; flex-direction:column;">
         <p class="card-type">Red Team + Blue Team · Competition · Co-Captain</p>
         <p class="card-title">Collegiate Cybersecurity Competitions — CPTC &amp; CCDC</p>
-        <p class="card-desc">Co-captained CCSF teams in both the Collegiate Penetration Testing Competition (CPTC) and Collegiate Cyber Defense Competition (CCDC/WRCCDC). Led red team engagements simulating real-world attacks on enterprise environments and blue team defense of live infrastructure under active red team pressure.</p>
+        <p class="card-desc">Co-captained CCSF teams in the Collegiate Penetration Testing Competition and Collegiate Cyber Defense Competition. Led red team engagements against simulated enterprise environments and blue team defense of live infrastructure under active attack.</p>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:14px 0;">
           <div>
             <p style="font-family:var(--mono); font-size:10px; color:var(--green); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px;">Red Team (CPTC)</p>
             <div class="feature-item" style="margin-bottom:6px;"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Enterprise environment simulations</span></div>
             <div class="feature-item" style="margin-bottom:6px;"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Vulnerability assessment and exploitation</span></div>
             <div class="feature-item" style="margin-bottom:6px;"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Privilege escalation and lateral movement</span></div>
-            <div class="feature-item"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Professional pentest reports and remediation</span></div>
+            <div class="feature-item"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Professional pentest reports with remediation</span></div>
           </div>
           <div>
             <p style="font-family:var(--mono); font-size:10px; color:var(--green); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px;">Blue Team (CCDC)</p>
             <div class="feature-item" style="margin-bottom:6px;"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">SIEM deployment and real-time log monitoring</span></div>
-            <div class="feature-item" style="margin-bottom:6px;"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Firewall and IDS configuration under live attack</span></div>
+            <div class="feature-item" style="margin-bottom:6px;"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Firewall and IDS setup under live attack</span></div>
             <div class="feature-item" style="margin-bottom:6px;"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Incident response and system hardening</span></div>
             <div class="feature-item"><span class="feature-dot"></span><span style="font-size:12px; color:var(--text-muted);">Post-incident documentation and lessons learned</span></div>
           </div>
@@ -192,14 +231,14 @@
       <a href="https://drive.google.com/file/d/1KXVNMRyGGXHVs_ht5GHZxnpdxBTt2H-Y/view?usp=drive_link" target="_blank" class="project-card">
         <p class="card-type">Speaking · GRC</p>
         <p class="card-title">Lightning Talks</p>
-        <p class="card-desc">Presented on Change Management Protocol and Pig Butchering Scam Awareness — communicating security concepts to non-technical audiences.</p>
-        <span class="card-link">View slides →</span>
+        <p class="card-desc">Presented on Change Management Protocol and Pig Butchering Scam Awareness, communicating security concepts to non-technical audiences.</p>
+        <span class="card-link">Watch 4-minute video →</span>
       </a>
 
       <a href="https://www.youtube.com/watch?v=WleUGJO7j4w" target="_blank" class="project-card">
         <p class="card-type">Competition · Hardware Security · 2024</p>
         <p class="card-title">MITRE eCTF — Embedded CTF</p>
-        <p class="card-desc">Participated in MITRE's Embedded Capture the Flag competition in 2024, a hardware security challenge involving attack and defense of embedded systems. Featured in the official competition promo video.</p>
+        <p class="card-desc">Participated in MITRE's Embedded Capture the Flag in 2024, a hardware security challenge involving attack and defense of embedded systems. Featured in the official competition promo video.</p>
         <span class="card-link">Watch video →</span>
       </a>
 
@@ -219,25 +258,25 @@
         <span class="exp-date">Jul 2025 – Oct 2025</span>
       </div>
       <ul class="exp-bullets">
-        <li>Conducted black-box penetration testing on an AI web application to identify security vulnerabilities, unexpected behaviors, and user-impacting issues.</li>
-        <li>Performed vulnerability testing using Burp Suite, Kali Linux, and Metasploit — findings mapped to OWASP Top 10 risk categories.</li>
-        <li>Assisted development teams with backend/frontend security validation during the development lifecycle.</li>
-        <li>Identified unnecessary cloud resource usage, helping reduce operational costs through improved cloud resource allocation.</li>
-        <li>Collaborated with developers and stakeholders using Agile workflows to document testing results and remediation recommendations.</li>
+        <li>Ran black-box penetration testing on an AI web application to uncover security vulnerabilities, unexpected behaviors, and user-facing issues.</li>
+        <li>Used Burp Suite, Kali Linux, and Metasploit for vulnerability testing, mapping every finding to an OWASP Top 10 category.</li>
+        <li>Worked directly with development teams to validate backend and frontend security throughout the development lifecycle.</li>
+        <li>Spotted unnecessary cloud resource usage and helped reduce operational costs through better allocation.</li>
+        <li>Documented testing results and remediation recommendations for developers and stakeholders using Agile workflows.</li>
       </ul>
     </div>
 
     <div class="exp-card">
       <div class="exp-header">
         <div>
-          <p class="exp-title">Founder &amp; President — WiCyS CCSF Chapter</p>
+          <p class="exp-title">Founder &amp; President, WiCyS CCSF Chapter</p>
           <p class="exp-org">Women in Cybersecurity (WiCyS)</p>
         </div>
         <span class="exp-date">Jul 2024 – Dec 2025</span>
       </div>
       <ul class="exp-bullets">
-        <li>Founded and grew the chapter to 60+ active members, building one of CCSF's most active technical student communities.</li>
-        <li>Organized cybersecurity workshops, hands-on labs, and speaker events to develop student skills in the field.</li>
+        <li>Founded the CCSF chapter of WiCyS, a nationally recognized organization dedicated to recruiting, retaining, and advancing women in cybersecurity. Grew membership to 60+ active students.</li>
+        <li>Organized cybersecurity workshops, hands-on labs, and speaker events to help students build real skills in the field.</li>
         <li>Secured sponsorship from Pacific Hackers and student council organizations to fund training initiatives.</li>
       </ul>
     </div>
@@ -252,7 +291,7 @@
       </div>
       <ul class="exp-bullets">
         <li>Mentored high school and college students in Wireshark, Burp Suite, and Kali Linux.</li>
-        <li>Delivered hands-on labs via TryHackMe, teaching penetration testing and network security fundamentals.</li>
+        <li>Ran hands-on labs through TryHackMe, teaching penetration testing and network security fundamentals.</li>
       </ul>
     </div>
 
@@ -265,7 +304,7 @@
         <span class="exp-date">Aug 2024</span>
       </div>
       <ul class="exp-bullets">
-        <li>Provided technical setup and troubleshooting support for hands-on cybersecurity workshops at DEF CON training sessions.</li>
+        <li>Provided technical setup and troubleshooting support for hands-on cybersecurity workshops at DEF CON.</li>
       </ul>
     </div>
   </section>
