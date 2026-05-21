@@ -238,6 +238,20 @@ h1 {
   transform: translateY(-1px);
 }
 
+.btn-github {
+  background: var(--green);
+  color: #000;
+  border: 1px solid var(--green);
+  transition: all 0.25s ease;
+}
+
+.btn-github:hover {
+  background: #7c3aed;
+  border-color: #7c3aed;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
 .hero-status {
   font-family: var(--mono);
   font-size: 11px;
