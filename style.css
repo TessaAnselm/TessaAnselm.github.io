@@ -632,6 +632,66 @@ h3 {
   flex-shrink: 0;
 }
 
+/* COURSEWORK */
+.coursework {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.coursework-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.coursework-label span {
+  color: var(--green);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.course-group {
+  margin-bottom: 14px;
+}
+
+.course-group:last-child {
+  margin-bottom: 0;
+}
+
+.course-cat {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.course-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.course-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-muted);
+  transition: all 0.2s;
+}
+
+.course-tag:hover {
+  border-color: var(--border-accent);
+  color: var(--green);
+  background: var(--green-glow);
+}
+
 /* EXPERIENCE */
 .exp-card {
   background: var(--bg-card);
