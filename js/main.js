@@ -8,6 +8,7 @@ Promise.all([
   loadComponent('nav-placeholder',        'nav.html'),
   loadComponent('hero-placeholder',       'hero.html'),
   loadComponent('story-placeholder',      'story.html'),
+  loadComponent('monster-banner-placeholder', 'monster-banner.html'),
   loadComponent('projects-placeholder',   'projects.html'),
   loadComponent('experience-placeholder', 'experience.html'),
   loadComponent('skills-placeholder',     'skills.html'),
